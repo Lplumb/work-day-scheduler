@@ -1,5 +1,7 @@
 $(document).ready(function(){
     $("#currentDay").text(moment().format('MMMM Do YYYY'))
+
+
     $(".saveBtn").on('click', function(){
         var intel = $(this).siblings(".description").val()
         var time = $(this).parent().attr("id")
@@ -51,7 +53,7 @@ $(document).ready(function(){
             var id = $(this).attr("id")
             if (id < currentTime) {
                 $(this).addClass("past")
-            } else if(id === currentTime) {
+            } else if (id === currentTime) {
                 $(this).addClass("present")
             } else {
                 $(this).addClass("future")
@@ -151,16 +153,38 @@ $(document).ready(function(){
         console.log(currentTime)
         $(".time-block").each(function(){
             var id = $(this).attr("id")
+            console.log(id)
+            console.log(currentTime)
             if (id < currentTime) {
                 $(this).addClass("past")
-            } else if(id === currentTime) {
+            } else if(id == currentTime) {
                 $(this).addClass("present")
             } else {
                 $(this).addClass("future")
             }
         })
     }
+
+    // $("#21 .description").val(localStorage.getItem("21"))
+
+    // function backgroundPage() {
+    //     var currentTime = moment().hours()
+    //     console.log(currentTime)
+    //     $(".time-block").each(function(){
+    //         var id = $(this).attr("id")
+    //         console.log(typeof id)
+    //         console.log(typeof currentTime)
+    //         if (id < currentTime) {
+    //             $(this).addClass("past")
+    //         } else if(Number(id) === Number(currentTime)) {
+    //             $(this).addClass("present")
+    //         } else {
+    //             $(this).addClass("future")
+    //         }
+    //     })
+    // }
     
     backgroundUpdate()
+    // backgroundPage()
 
 })
