@@ -12,3 +12,6 @@ You are able to click into any of the time blocks and enter whatever and save it
 depending on the hour, with hours that have already happened being grey, with the current time being red, and the future hours being green.
 
 Also at the top of the web page we can also just view the current date and year.
+
+https://lplumb.github.io/work-day-scheduler/
+
